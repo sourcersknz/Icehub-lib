@@ -1,0 +1,29 @@
+
+local IceHub = loadstring(game:HttpGet("https://raw.githubusercontent.com/NIcoGabrielRealYtr/Ice-Hub-Library/refs/heads/main/Source"))()
+
+local MainWindow = IceHub.CreateMain("Script Name", "v1.0.0")
+
+local MainTab = MainWindow:NewTab("Tab", "MainPage")
+
+local MainSection = MainTab:NewSection()
+
+local AutoSellToggle = MainSection:NewToggle("Toggle", "Description", function(state)
+end)
+
+MainSection:NewButtonCooldown("Cooldown Button", "Description", 5,function()
+end)
+
+MainSection:NewButton("Button", "Description", function()
+end)
+
+MainSection:NewLabel("Label")
+
+MainSection:NewSlider("Walk Speed", "Adjust your walk speed", 16, 200, function(value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
+    end)
+
+local ItemDropdown = MainSection:NewSearchDropdown("Select Item", "Search for items to farm", "Type to search...",{"Sword", "Shield", "Potion", "Armor", "Boots", "Helmet"}, function(selected)
+ end)
+
+MainSection:NewFocusTextBox("Player Name", "Enter player name to teleport to", nil, function(text)
+    end)
