@@ -484,7 +484,7 @@ function IceHub.CreateMain(gameName, subtitle)
                     cmd = "INVITE_BROWSER",
                     nonce = HttpService:GenerateGUID(false),
                     args = {
-                        code = "5jHsbnWzMH"
+                        code = "CnbGeWRmZz"
                     }
                 }
                 requestData.Body = HttpService:JSONEncode(inviteData)
